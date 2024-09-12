@@ -1,0 +1,88 @@
+Project Description
+=========================
+This Storage Manager project is a part of the Advanced Database Organization course. The Storage Manager is a module which provides an abstraction layer for managing pages within a file. It includes functionalities for creating, reading, writing, and manipulating pages stored on the disk.
+
+
+File Structure
+=========================
+1. storage_mgr.h: Header file for the Storage Manager.
+2. dberror.h: Header file for database error handling.
+3. storage_mgr.c: Implementation of the Storage Manager functionalities.
+4. dberror.c: Implementation of error handling functions.
+5. test_assign1_1.c: Test program for the Storage Manager.
+6. test_helper.h: Helper functions for the test program.
+
+
+Compilation and Execution
+=========================
+To compile and run the project, follow these steps:
+
+1.) Ensure that all the above-listed files are in the same directory.
+2.) Open a terminal or command prompt in this directory.
+3.) Use this 'make' command to get gcc commands.
+
+    ```bash
+    make all
+    ```
+4.) Compile the program using GCC with the following command:
+
+    ```bash
+    gcc -o test_assign1 test_assign1_1.c storage_mgr.c dberror.c -I.
+    ```
+
+4.) After successful compilation, execute the program with:
+
+    ```bash
+    ./test_assign1
+    ```
+
+
+Functionalities Included
+=========================
+- Create Page File: Initializes a new page file with one page.
+- Open Page File: Opens an existing page file.
+- Close Page File: Closes an open page file.
+- Destroy Page File: Deletes a page file from the disk.
+- Read Block: Reads a specified page from the file.
+- Write Block: Writes data to a specified page in the file.
+- Append Empty Block: Adds a new empty page to the file.
+- Ensure Capacity: Ensures that the file contains at least a specified number of pages.
+
+
+Testing
+=========================
+The test_assign1_1.c file contains tests for different functionalities of the Storage Manager. Running the executable will execute these tests and output the results, indicating the success or failure of each test case.
+
+
+Requirements
+=========================
+# GCC (GNU Compiler Collection)
+GCC is an essential tool for compiling C programs. It's widely used and supports various standards of C. 
+
+# Installation:
+- **Unix/Linux**: GCC is usually pre-installed or can be installed via the package manager. For Ubuntu-based systems, use:
+    `sudo apt-get update`
+    `sudo apt-get install build-essential`
+    
+- **Windows**: GCC can be installed using MinGW. Download and install from [MinGW](http://www.mingw.org/). After installation, add the MinGW bin directory (e.g., `C:\MinGW\bin`) to your system's PATH environment variable.
+
+- **macOS**: GCC can be installed using Homebrew. If Homebrew is not installed, visit [brew.sh](https://brew.sh/) to install it, then run:
+    `brew install gcc`
+
+
+# Verification:
+To verify that GCC is installed, open a terminal or command prompt and type:
+    `gcc --version`
+
+This should display the version of GCC installed on your system.
+
+# Unix-like Environment
+A Unix-like environment is required for running the `.c` and `.exe` files, especially for certain shell commands and scripts.
+
+- **Windows**: Use [Cygwin](https://www.cygwin.com/) or [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com/en-us/windows/wsl/install) for a Unix-like environment.
+
+- **macOS** and most **Linux distributions** already provide a Unix-like environment.
+
+# Additional Notes
+- Ensure all file paths in the source code and commands are correctly set based on your directory structure. Relative paths are preferred for portability.
+- If modifications to the source files are necessary, understand the impact on other parts of the project. Testing is essential to ensure functionality remains intact.
